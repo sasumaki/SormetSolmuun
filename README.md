@@ -1,2 +1,2 @@
 # SormetSolmuun
-Javalabratyö
+Javalabratyö Kappa
