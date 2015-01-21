@@ -1,2 +1,0 @@
-# SormetSolmuun
-Javalabratyö Kappa HueHueheu
