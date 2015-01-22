@@ -6,3 +6,6 @@
 
 21.1.2015 klo 15.15 - 15.45
  pom.xml korjailu ja ihmettely sekä testien tekemisen ihmettelyä.
+
+22.1.2015 klo 14.00 - 15.30
+ Testien tekoa

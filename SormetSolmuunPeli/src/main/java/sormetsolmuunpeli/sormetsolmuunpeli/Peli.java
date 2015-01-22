@@ -55,4 +55,31 @@ public class Peli {
 
         return false;
     }
+
+    public void kaynnistys(Scanner lukija) {
+        System.out.println("Tervetuloa Aakkospeliin " + pelaaja.getNimi() + "!");
+
+        luoAakkosto();
+
+        kierros(lukija);
+    }
+
+    public void kierros(Scanner lukija) {
+
+        String vastaus = getKirjain(aakkosto);
+        poistaKirjain(vastaus);
+        System.out.println("Paina: " + vastaus);
+        String syote = lukija.nextLine();
+        while (testaaMerkki(syote, vastaus) == false) {
+            System.out.println("Väärin meni los retardos, yritä uudelleen: " + vastaus);
+            syote = lukija.nextLine();
+        }
+        if (aakkosto.isEmpty()) {
+            System.out.println("Voitit pelin!");
+            pelaaja.lisaaPisteet(1);
+
+        } else {
+            kierros(lukija);
+        }
+    }
 }
