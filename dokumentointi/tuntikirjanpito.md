@@ -9,3 +9,6 @@
 
 22.1.2015 klo 14.00 - 15.30
  Testien tekoa
+
+28.1.2015 klo 13.00 - 16.15
+ Jonkinlainen käyttöliittymä tehty.
