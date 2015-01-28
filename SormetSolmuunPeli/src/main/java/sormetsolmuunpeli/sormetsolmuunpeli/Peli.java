@@ -5,28 +5,34 @@
  */
 package sormetsolmuunpeli.sormetsolmuunpeli;
 
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
+
 /**
  *
  * @author sasumaki
  */
-public class Peli {
+public class Peli  {
 
     private Pelaaja pelaaja;
     private List aakkosto;
+    private Scanner lukija;
+   
 
     public Peli(Pelaaja pelaaja, Scanner lukija) {
         this.pelaaja = pelaaja;
         this.aakkosto = aakkosto;
+        this.lukija = lukija;
     }
 
     public void luoAakkosto() {
-        String[] aakkosto = {"a", "b", "c", "d"};
+        String[] aakkosto = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l",
+            "m","n","o","p","q","r","s","t","u","v","w","x","y","z"};
 
         List<String> aakkostolista = new ArrayList<String>(Arrays.asList(aakkosto));
         this.aakkosto = aakkostolista;
@@ -39,6 +45,9 @@ public class Peli {
     public List getAakkosto() {
         return aakkosto;
     }
+    public Scanner getLukija(){
+        return lukija;
+    }
 
     public String getKirjain(List lista) {
         String kirjain = "";
@@ -49,7 +58,7 @@ public class Peli {
     }
 
     public Boolean testaaMerkki(String syote, String vastaus) {
-        if (syote.equals(vastaus)) {
+        if (syote.equalsIgnoreCase(vastaus)) {
             return true;
         }
 
@@ -82,4 +91,6 @@ public class Peli {
             kierros(lukija);
         }
     }
+
+ 
 }
