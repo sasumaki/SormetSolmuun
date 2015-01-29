@@ -12,3 +12,6 @@
 
 28.1.2015 klo 13.00 - 16.15
  Jonkinlainen käyttöliittymä tehty.
+
+29.1.2015 klo 15.30 - 16.00
+ Käyttöliittymän päivittelyä. Bugi havaittu, jossa joskus pelin antama kirjain ei ilmesty. Korjataan joskus. 
