@@ -5,7 +5,6 @@ package sormetsolmuunpeli.testipakkaus;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -51,14 +50,14 @@ public class Pelitesti {
     }
 
     @Test
+    @SuppressWarnings("empty-statement")
     public void luoAakkostonOikein() {
         peli.luoAakkosto();
         List vastaus = peli.getAakkosto();
         List kokeilu = new ArrayList<String>();
-        kokeilu.add("a");
-        kokeilu.add("b");
-        kokeilu.add("c");
-        kokeilu.add("d");
+        for (char a = 'a'; a <= 'z'; a++) {
+            kokeilu.add(a + "");
+        }
 
         assertEquals(kokeilu, vastaus);
 
@@ -69,9 +68,9 @@ public class Pelitesti {
         peli.luoAakkosto();
         peli.poistaKirjain("a");
         List kokeilu = new ArrayList<String>();
-        kokeilu.add("b");
-        kokeilu.add("c");
-        kokeilu.add("d");
+        for (char a = 'b'; a <= 'z'; a++) {
+            kokeilu.add(a + "");
+        }
 
         assertEquals(kokeilu, peli.getAakkosto());
     }
@@ -81,10 +80,9 @@ public class Pelitesti {
         peli.luoAakkosto();
         peli.poistaKirjain("Kappanator666");
         List kokeilu = new ArrayList<String>();
-        kokeilu.add("a");
-        kokeilu.add("b");
-        kokeilu.add("c");
-        kokeilu.add("d");
+        for (char a = 'a'; a <= 'z'; a++) {
+            kokeilu.add(a + "");
+        }
 
         assertEquals(kokeilu, peli.getAakkosto());
     }
@@ -109,4 +107,30 @@ public class Pelitesti {
 
     }
 
+    @Test
+    public void testaaVirheidenLisays() {
+        peli.virheidenLisays();
+
+        assertEquals(1, peli.getVirheet());
+    }
+
+    @Test
+    public void testaaLiikaaVirheita1() {
+        peli.virheidenLisays();
+        peli.virheidenLisays();
+        peli.virheidenLisays();
+        peli.virheidenLisays();
+
+        assertEquals(true, peli.liikaaVirheita());
+    }
+
+    @Test
+    public void testaaLiikaaVirheita2() {
+
+        peli.virheidenLisays();
+        peli.virheidenLisays();
+
+        assertEquals(false, peli.liikaaVirheita());
+
+    }
 }

@@ -22,12 +22,14 @@ public class Peli  {
     private Pelaaja pelaaja;
     private List aakkosto;
     private Scanner lukija;
+    private int virheet;
    
 
     public Peli(Pelaaja pelaaja, Scanner lukija) {
         this.pelaaja = pelaaja;
         this.aakkosto = aakkosto;
         this.lukija = lukija;
+        this.virheet = virheet;
     }
 
     public void luoAakkosto() {
@@ -64,33 +66,48 @@ public class Peli  {
 
         return false;
     }
-
-    public void kaynnistys(Scanner lukija) {
-        System.out.println("Tervetuloa Aakkospeliin " + pelaaja.getNimi() + "!");
-
-        luoAakkosto();
-
-        kierros(lukija);
+    public void virheidenLisays(){
+        virheet++;
     }
-
-    public void kierros(Scanner lukija) {
-
-        String vastaus = getKirjain(aakkosto);
-        poistaKirjain(vastaus);
-        System.out.println("Paina: " + vastaus);
-        String syote = lukija.nextLine();
-        while (testaaMerkki(syote, vastaus) == false) {
-            System.out.println("Väärin meni los retardos, yritä uudelleen: " + vastaus);
-            syote = lukija.nextLine();
-        }
-        if (aakkosto.isEmpty()) {
-            System.out.println("Voitit pelin!");
-            pelaaja.lisaaPisteet(1);
-
-        } else {
-            kierros(lukija);
-        }
+    public int getVirheet(){
+        return virheet;
     }
+    public boolean liikaaVirheita(){
+        if(virheet > 3){
+            return true;
+        }
+        return false;
+    }
+    
+    
+            //vanhaa tekstikäyttöliittymää
+
+//    public void kaynnistys(Scanner lukija) {
+//        System.out.println("Tervetuloa Aakkospeliin " + pelaaja.getNimi() + "!");
+//
+//        luoAakkosto();
+//
+//        kierros(lukija);
+//    }
+//
+//    public void kierros(Scanner lukija) {
+//
+//        String vastaus = getKirjain(aakkosto);
+//        poistaKirjain(vastaus);
+//        System.out.println("Paina: " + vastaus);
+//        String syote = lukija.nextLine();
+//        while (testaaMerkki(syote, vastaus) == false) {
+//            System.out.println("Väärin meni los retardos, yritä uudelleen: " + vastaus);
+//            syote = lukija.nextLine();
+//        }
+//        if (aakkosto.isEmpty()) {
+//            System.out.println("Voitit pelin!");
+//            pelaaja.lisaaPisteet(1);
+//
+//        } else {
+//            kierros(lukija);
+//        }
+//    }
 
  
 }

@@ -15,3 +15,6 @@
 
 29.1.2015 klo 15.30 - 16.00
  Käyttöliittymän päivittelyä. Bugi havaittu, jossa joskus pelin antama kirjain ei ilmesty. Korjataan joskus. 
+
+30.1.2015 klo 10.30 - 11.45
+ Testien tekoa, tämänhetkisen luokkaakaavion teko sekä hieman ohjelmalogiikkaa. Cobertura ei toimi tuntemattommasta syystä
