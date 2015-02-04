@@ -9,6 +9,7 @@ import java.awt.Component;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import Sormetsolmuun.Logiikka.Invokerpelilogiikka.Invokerpeli;
+import javax.swing.JTextField;
 
 /**
  *
@@ -18,15 +19,21 @@ public class TapahtumakuuntelijaInvokerpeliin implements KeyListener {
 
     Invokerpeli peli;
     Component paivitettava;
+    JTextField invokettava;
+    private int pisteet;
 
-    public TapahtumakuuntelijaInvokerpeliin(Invokerpeli peli, Component paivitettava) {
+    public TapahtumakuuntelijaInvokerpeliin(Invokerpeli peli, Component paivitettava, JTextField invokettava) {
         this.peli = peli;
         this.paivitettava = paivitettava;
+        this.invokettava = invokettava;
+        this.pisteet = 0;
     }
 
     @Override
     public void keyPressed(KeyEvent ke) {
         String syotetty = "" + ke.getKeyChar();
+        
+        
         if (syotetty.equals("q")) {
             peli.orbinvaihto(1);
         }
@@ -37,19 +44,28 @@ public class TapahtumakuuntelijaInvokerpeliin implements KeyListener {
             peli.orbinvaihto(3);
         }
         if (syotetty.equals("r")) {
-            peli.invoke();
+            if(invokettava.getText().equals(peli.invoke().name())){
+                pisteet++;
+               if(pisteet == 10){
+                   invokettava.setText("You Wonnered!");
+               }else{
+                invokettava.setText(peli.getSpell());
+               }
+            }
+            else{
+                invokettava.setText("This magic...disappoints");
+            }
+            
         }
         paivitettava.repaint();
     }
 
     @Override
     public void keyReleased(KeyEvent ke) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
     public void keyTyped(KeyEvent ke) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }

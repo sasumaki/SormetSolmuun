@@ -24,7 +24,7 @@ public class InvokerpeliGUI {
     private Invokerpeli peli;
     private Piirtoalusta piirtoalusta;
 
-    public InvokerpeliGUI(Invokerpeli peli, JFrame frame) {
+    public InvokerpeliGUI(Invokerpeli peli, JFrame frame)  {
 
         this.peli = peli;
         this.frame = frame;
@@ -46,7 +46,7 @@ public class InvokerpeliGUI {
         invokettava.setEditable(false);
         container.add(invokettava);
         piirtoalusta = new Piirtoalusta(peli);
-        frame.addKeyListener(new TapahtumakuuntelijaInvokerpeliin(peli, piirtoalusta));
+        frame.addKeyListener(new TapahtumakuuntelijaInvokerpeliin(peli, piirtoalusta,invokettava));
         container.add(piirtoalusta);
 
         piirtoalusta.setEnabled(true);

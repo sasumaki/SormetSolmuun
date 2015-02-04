@@ -12,6 +12,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 import static Sormetsolmuun.Logiikka.Invokerpelilogiikka.Invokerpeli.spellit.*;
+import java.util.Random;
 
 /**
  *
@@ -20,10 +21,12 @@ import static Sormetsolmuun.Logiikka.Invokerpelilogiikka.Invokerpeli.spellit.*;
 public class Invokerpeli extends Aakkospeli {
 
     private int[] orbit;
+    private ArrayList<Enum> lista;
 
     public Invokerpeli(Pelaaja pelaaja, Scanner lukija) {
         super(pelaaja, lukija);
         this.orbit = new int[3];
+        this.lista = new ArrayList<Enum>();
     }
 
     public enum spellit {
@@ -31,11 +34,34 @@ public class Invokerpeli extends Aakkospeli {
         COLDSNAP, TORNADO, EMP, METEOR, SUNSTRIKE, GHOSTWALK, ALACRITY, DEAFENINGBLAST,
         FORGESPIRIT, ICEWALL;
     }
-    public String getSpell(){
-        
-        return COLDSNAP.name();
+
+    public String getSpell() {
+
+        Random random = new Random();
+
+        return lista.get(random.nextInt(lista.size())).name();
     }
-    
+    public void poistaSpelli(Enum poistettava){
+        lista.remove(poistettava);
+    }
+    public ArrayList<Enum> getSpelliLista(){
+        return lista;
+    }
+
+    public void luoSpelliLista() {
+
+        lista.add(COLDSNAP);
+        lista.add(TORNADO);
+        lista.add(EMP);
+        lista.add(METEOR);
+        lista.add(SUNSTRIKE);
+        lista.add(GHOSTWALK);
+        lista.add(ALACRITY);
+        lista.add(DEAFENINGBLAST);
+        lista.add(FORGESPIRIT);
+        lista.add(ICEWALL);
+
+    }
 
     public void orbinvaihto(int orbi) {
         if (orbi < 0 || orbi > 3) {
@@ -134,7 +160,8 @@ public class Invokerpeli extends Aakkospeli {
         return null;
 
     }
-    public int[] getOrbit(){
+
+    public int[] getOrbit() {
         return orbit;
     }
 

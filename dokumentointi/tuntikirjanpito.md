@@ -21,3 +21,6 @@
 
 4.2.2015 klo 12.30 - 18.00
  Invokerpeli lisäosan alotus sekä käyttöliittymän päivitystä. Pushi päättyi tilanteeseen, jossa peli rikki
+
+4.2.2015 klo 22.00 - 01.00
+ Invokerpelin kehitys

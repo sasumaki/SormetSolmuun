@@ -16,6 +16,7 @@ public class Main {
         Aakkospeli aakkospeli = new Aakkospeli(pelaaja, lukija);
         Invokerpeli invokerpeli = new Invokerpeli(pelaaja, lukija);
         aakkospeli.luoAakkosto();
+        invokerpeli.luoSpelliLista();
         
         SwingUtilities.invokeLater(new Kayttoliittyma(aakkospeli, invokerpeli));
 

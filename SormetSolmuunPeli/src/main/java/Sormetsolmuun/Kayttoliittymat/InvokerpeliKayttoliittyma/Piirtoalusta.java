@@ -28,13 +28,13 @@ public class Piirtoalusta extends JPanel {
     }
 
     private void piirraKolmasPallo(int[] orbit, Graphics graphics) {
-        if (orbit[2] == 1) {
+        if (orbit[0] == 1) {
             graphics.setColor(Color.BLUE);
             graphics.fillOval(180, 20, 40, 40);
-        } else if (orbit[2] == 2) {
+        } else if (orbit[0] == 2) {
             graphics.setColor(Color.MAGENTA);
             graphics.fillOval(180, 20, 40, 40);
-        } else if (orbit[2] == 3) {
+        } else if (orbit[0] == 3) {
             graphics.setColor(Color.ORANGE);
             graphics.fillOval(180, 20, 40, 40);
         } else {
@@ -61,13 +61,13 @@ public class Piirtoalusta extends JPanel {
     }
 
     private void piirraEnsimmainenPallo(int[] orbit, Graphics graphics) {
-        if (orbit[0] == 1) {
+        if (orbit[2] == 1) {
             graphics.setColor(Color.BLUE);
             graphics.fillOval(80, 20, 40, 40);
-        } else if (orbit[0] == 2) {
+        } else if (orbit[2] == 2) {
             graphics.setColor(Color.MAGENTA);
             graphics.fillOval(80, 20, 40, 40);
-        } else if (orbit[0] == 3) {
+        } else if (orbit[2] == 3) {
             graphics.setColor(Color.ORANGE);
             graphics.fillOval(80, 20, 40, 40);
         } else {
