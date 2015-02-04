@@ -1,4 +1,4 @@
-package Kayttoliittyma;
+package Sormetsolmuun.Kayttoliittymat.MenuKayttoliittyma;
 
 import java.awt.Color;
 import java.awt.Container;
@@ -11,8 +11,8 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.WindowConstants;
-import sormetsolmuunpeli.sormetsolmuunpeli.Aakkospeli;
-import sormetsolmuunpeli.sormetsolmuunpeli.Invokerpeli;
+import Sormetsolmuun.Logiikka.Aakkospelilogiikka.Aakkospeli;
+import Sormetsolmuun.Logiikka.Invokerpelilogiikka.Invokerpeli;
 
 public class Kayttoliittyma implements Runnable {
 

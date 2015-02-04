@@ -3,13 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package sormetsolmuunpeli.sormetsolmuunpeli;
+package Sormetsolmuun.Logiikka.Invokerpelilogiikka;
 
+import Sormetsolmuun.Logiikka.Aakkospelilogiikka.Aakkospeli;
+import Sormetsolmuun.Sormetsolmuun.Pelaaja;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
-import static sormetsolmuunpeli.sormetsolmuunpeli.Invokerpeli.spellit.*;
+import static Sormetsolmuun.Logiikka.Invokerpelilogiikka.Invokerpeli.spellit.*;
 
 /**
  *

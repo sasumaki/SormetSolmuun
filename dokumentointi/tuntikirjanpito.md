@@ -18,3 +18,6 @@
 
 30.1.2015 klo 10.30 - 11.45
  Testien tekoa, tämänhetkisen luokkaakaavion teko sekä hieman ohjelmalogiikkaa. Cobertura ei toimi tuntemattommasta syystä
+
+4.2.2015 klo 12.30 - 18.00
+ Invokerpeli lisäosan alotus sekä käyttöliittymän päivitystä. Pushi päättyi tilanteeseen, jossa peli rikki

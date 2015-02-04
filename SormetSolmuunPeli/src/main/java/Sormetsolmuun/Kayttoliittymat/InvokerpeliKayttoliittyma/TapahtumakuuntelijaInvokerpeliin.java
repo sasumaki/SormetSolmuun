@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Kayttoliittyma;
+package Sormetsolmuun.Kayttoliittymat.InvokerpeliKayttoliittyma;
 
 import java.awt.Component;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-import sormetsolmuunpeli.sormetsolmuunpeli.Invokerpeli;
+import Sormetsolmuun.Logiikka.Invokerpelilogiikka.Invokerpeli;
 
 /**
  *

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Kayttoliittyma;
+package Sormetsolmuun.Kayttoliittymat.AakkospeliKayttoliittyma;
 
 import java.awt.Color;
 import java.awt.Container;
@@ -14,7 +14,7 @@ import javax.swing.JFrame;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.WindowConstants;
-import sormetsolmuunpeli.sormetsolmuunpeli.Aakkospeli;
+import Sormetsolmuun.Logiikka.Aakkospelilogiikka.Aakkospeli;
 
 /**
  *

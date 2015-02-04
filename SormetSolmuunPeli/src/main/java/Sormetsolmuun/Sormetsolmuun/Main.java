@@ -1,11 +1,12 @@
-package sormetsolmuunpeli.sormetsolmuunpeli;
+package Sormetsolmuun.Sormetsolmuun;
 
-import Kayttoliittyma.Kayttoliittyma;
+import Sormetsolmuun.Logiikka.Invokerpelilogiikka.Invokerpeli;
+import Sormetsolmuun.Kayttoliittymat.MenuKayttoliittyma.Kayttoliittyma;
 import java.util.List;
 import java.util.Scanner;
 import javax.swing.SwingUtilities;
-import sormetsolmuunpeli.sormetsolmuunpeli.Pelaaja;
-import sormetsolmuunpeli.sormetsolmuunpeli.Aakkospeli;
+import Sormetsolmuun.Logiikka.Aakkospelilogiikka.Aakkospeli;
+import Sormetsolmuun.Logiikka.Aakkospelilogiikka.Aakkospeli;
 
 public class Main {
 

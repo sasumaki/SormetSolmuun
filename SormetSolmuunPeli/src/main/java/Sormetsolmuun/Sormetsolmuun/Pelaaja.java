@@ -1,4 +1,4 @@
-package sormetsolmuunpeli.sormetsolmuunpeli;
+package Sormetsolmuun.Sormetsolmuun;
 
 public class Pelaaja {
 

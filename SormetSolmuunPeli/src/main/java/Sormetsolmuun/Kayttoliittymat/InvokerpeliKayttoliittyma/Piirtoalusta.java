@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Kayttoliittyma;
+package Sormetsolmuun.Kayttoliittymat.InvokerpeliKayttoliittyma;
 
 /**
  *
@@ -13,7 +13,7 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.util.Arrays;
 import javax.swing.JPanel;
-import sormetsolmuunpeli.sormetsolmuunpeli.Invokerpeli;
+import Sormetsolmuun.Logiikka.Invokerpelilogiikka.Invokerpeli;
 
 public class Piirtoalusta extends JPanel {
 

@@ -3,8 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Kayttoliittyma;
+package Sormetsolmuun.Kayttoliittymat.MenuKayttoliittyma;
 
+import Sormetsolmuun.Kayttoliittymat.AakkospeliKayttoliittyma.AakkospeliGUI;
+import Sormetsolmuun.Kayttoliittymat.InvokerpeliKayttoliittyma.InvokerpeliGUI;
 import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.GridLayout;
@@ -13,8 +15,8 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.WindowConstants;
-import sormetsolmuunpeli.sormetsolmuunpeli.Aakkospeli;
-import sormetsolmuunpeli.sormetsolmuunpeli.Invokerpeli;
+import Sormetsolmuun.Logiikka.Aakkospelilogiikka.Aakkospeli;
+import Sormetsolmuun.Logiikka.Invokerpelilogiikka.Invokerpeli;
 
 /**
  *

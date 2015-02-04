@@ -14,8 +14,8 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
-import sormetsolmuunpeli.sormetsolmuunpeli.Pelaaja;
-import sormetsolmuunpeli.sormetsolmuunpeli.Aakkospeli;
+import Sormetsolmuun.Sormetsolmuun.Pelaaja;
+import Sormetsolmuun.Logiikka.Aakkospelilogiikka.Aakkospeli;
 
 /**
  *

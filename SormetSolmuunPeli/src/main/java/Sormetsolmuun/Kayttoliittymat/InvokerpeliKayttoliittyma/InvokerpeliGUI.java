@@ -3,14 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Kayttoliittyma;
+package Sormetsolmuun.Kayttoliittymat.InvokerpeliKayttoliittyma;
 
 import java.awt.Container;
 import java.awt.GridLayout;
-import javax.swing.BoxLayout;
 import javax.swing.JFrame;
-import sormetsolmuunpeli.sormetsolmuunpeli.Aakkospeli;
-import sormetsolmuunpeli.sormetsolmuunpeli.Invokerpeli;
+import Sormetsolmuun.Logiikka.Invokerpelilogiikka.Invokerpeli;
 
 /**
  *

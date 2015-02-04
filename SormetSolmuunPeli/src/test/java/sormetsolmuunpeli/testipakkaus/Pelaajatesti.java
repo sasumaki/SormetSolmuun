@@ -12,7 +12,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
-import sormetsolmuunpeli.sormetsolmuunpeli.Pelaaja;
+import Sormetsolmuun.Sormetsolmuun.Pelaaja;
 
 /**
  *
