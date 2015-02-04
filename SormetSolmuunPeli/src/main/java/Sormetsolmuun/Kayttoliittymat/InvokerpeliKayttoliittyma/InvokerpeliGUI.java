@@ -9,6 +9,10 @@ import java.awt.Container;
 import java.awt.GridLayout;
 import javax.swing.JFrame;
 import Sormetsolmuun.Logiikka.Invokerpelilogiikka.Invokerpeli;
+import java.awt.Color;
+import java.awt.Font;
+import javax.swing.JTextField;
+import javax.swing.SwingConstants;
 
 /**
  *
@@ -32,11 +36,17 @@ public class InvokerpeliGUI {
     }
 
     public void luoKomponentitInvokerpeliin(Container container) {
-        frame.setLayout(new GridLayout(1, 1));
-
+        frame.setLayout(new GridLayout(2, 1));
+        frame.requestFocus();
+        JTextField invokettava = new JTextField(peli.getSpell());
+        Font font = new Font("Comic Sans", Font.PLAIN, 24);
+        invokettava.setFont(font);
+        invokettava.setForeground(Color.BLACK);
+        invokettava.setHorizontalAlignment(SwingConstants.CENTER);
+        invokettava.setEditable(false);
+        container.add(invokettava);
         piirtoalusta = new Piirtoalusta(peli);
         frame.addKeyListener(new TapahtumakuuntelijaInvokerpeliin(peli, piirtoalusta));
-
         container.add(piirtoalusta);
 
         piirtoalusta.setEnabled(true);

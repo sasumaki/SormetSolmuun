@@ -16,8 +16,8 @@ import Sormetsolmuun.Logiikka.Invokerpelilogiikka.Invokerpeli;
  */
 public class TapahtumakuuntelijaInvokerpeliin implements KeyListener {
 
-    private Invokerpeli peli;
-    private Component paivitettava;
+    Invokerpeli peli;
+    Component paivitettava;
 
     public TapahtumakuuntelijaInvokerpeliin(Invokerpeli peli, Component paivitettava) {
         this.peli = peli;
@@ -26,16 +26,17 @@ public class TapahtumakuuntelijaInvokerpeliin implements KeyListener {
 
     @Override
     public void keyPressed(KeyEvent ke) {
-        if (ke.getKeyCode() == 'q') {
+        String syotetty = "" + ke.getKeyChar();
+        if (syotetty.equals("q")) {
             peli.orbinvaihto(1);
         }
-        if (ke.getKeyCode() == 'w') {
+        if (syotetty.equals("w")) {
             peli.orbinvaihto(2);
         }
-        if (ke.getKeyCode() == 'e') {
+        if (syotetty.equals("e")) {
             peli.orbinvaihto(3);
         }
-        if (ke.getKeyCode() == 'r') {
+        if (syotetty.equals("r")) {
             peli.invoke();
         }
         paivitettava.repaint();

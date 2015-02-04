@@ -28,9 +28,14 @@ public class Invokerpeli extends Aakkospeli {
 
     public enum spellit {
 
-        coldsnap, tornado, emp, meteor, sunstrike, ghostwalk, alacrity, deafeningblast,
-        forgespirit, icewall;
+        COLDSNAP, TORNADO, EMP, METEOR, SUNSTRIKE, GHOSTWALK, ALACRITY, DEAFENINGBLAST,
+        FORGESPIRIT, ICEWALL;
     }
+    public String getSpell(){
+        
+        return COLDSNAP.name();
+    }
+    
 
     public void orbinvaihto(int orbi) {
         if (orbi < 0 || orbi > 3) {
@@ -43,88 +48,88 @@ public class Invokerpeli extends Aakkospeli {
 
     public spellit invoke() {
         if (orbit[0] == 1 && orbit[1] == 1 && orbit[2] == 1) {
-            return coldsnap;
+            return COLDSNAP;
         }
 
         if (orbit[0] == 1 && orbit[1] == 1 && orbit[2] == 2) {
-            return ghostwalk;
+            return GHOSTWALK;
         }
         if (orbit[0] == 1 && orbit[1] == 1 && orbit[2] == 3) {
-            return icewall;
+            return ICEWALL;
         }
         if (orbit[0] == 1 && orbit[1] == 2 && orbit[2] == 1) {
-            return ghostwalk;
+            return GHOSTWALK;
         }
         if (orbit[0] == 1 && orbit[1] == 3 && orbit[2] == 1) {
-            return icewall;
+            return ICEWALL;
         }
         if (orbit[0] == 2 && orbit[1] == 1 && orbit[2] == 1) {
-            return ghostwalk;
+            return GHOSTWALK;
         }
         if (orbit[0] == 3 && orbit[1] == 1 && orbit[2] == 1) {
-            return icewall;
+            return ICEWALL;
         }
         if (orbit[0] == 2 && orbit[1] == 2 && orbit[2] == 2) {
-            return emp;
+            return EMP;
         }
         if (orbit[0] == 2 && orbit[1] == 2 && orbit[2] == 1) {
-            return tornado;
+            return TORNADO;
         }
 
         if (orbit[0] == 2 && orbit[1] == 2 && orbit[2] == 3) {
-            return alacrity;
+            return ALACRITY;
         }
         if (orbit[0] == 2 && orbit[1] == 1 && orbit[2] == 2) {
-            return tornado;
+            return TORNADO;
         }
         if (orbit[0] == 2 && orbit[1] == 3 && orbit[2] == 2) {
-            return alacrity;
+            return ALACRITY;
         }
         if (orbit[0] == 1 && orbit[1] == 2 && orbit[2] == 2) {
-            return tornado;
+            return TORNADO;
         }
         if (orbit[0] == 3 && orbit[1] == 2 && orbit[2] == 2) {
-            return alacrity;
+            return ALACRITY;
         }
 
         if (orbit[0] == 3 && orbit[1] == 3 && orbit[2] == 3) {
-            return sunstrike;
+            return SUNSTRIKE;
         }
         if (orbit[0] == 3 && orbit[1] == 3 && orbit[2] == 1) {
-            return forgespirit;
+            return FORGESPIRIT;
         }
         if (orbit[0] == 3 && orbit[1] == 3 && orbit[2] == 2) {
-            return meteor;
+            return METEOR;
         }
         if (orbit[0] == 3 && orbit[1] == 1 && orbit[2] == 3) {
-            return forgespirit;
+            return FORGESPIRIT;
         }
         if (orbit[0] == 3 && orbit[1] == 2 && orbit[2] == 3) {
-            return meteor;
+            return METEOR;
         }
         if (orbit[0] == 1 && orbit[1] == 3 && orbit[2] == 3) {
-            return forgespirit;
+            return FORGESPIRIT;
         }
         if (orbit[0] == 2 && orbit[1] == 3 && orbit[2] == 3) {
-            return meteor;
+            return METEOR;
         }
         if (orbit[0] == 1 && orbit[1] == 2 && orbit[2] == 3) {
-            return deafeningblast;
+            return DEAFENINGBLAST;
         }
         if (orbit[0] == 3 && orbit[1] == 2 && orbit[2] == 1) {
-            return deafeningblast;
+            return DEAFENINGBLAST;
         }
         if (orbit[0] == 2 && orbit[1] == 3 && orbit[2] == 1) {
-            return deafeningblast;
+            return DEAFENINGBLAST;
         }
         if (orbit[0] == 1 && orbit[1] == 3 && orbit[2] == 2) {
-            return deafeningblast;
+            return DEAFENINGBLAST;
         }
         if (orbit[0] == 3 && orbit[1] == 1 && orbit[2] == 2) {
-            return deafeningblast;
+            return DEAFENINGBLAST;
         }
         if (orbit[0] == 2 && orbit[1] == 1 && orbit[2] == 3) {
-            return deafeningblast;
+            return DEAFENINGBLAST;
         }
         return null;
 
