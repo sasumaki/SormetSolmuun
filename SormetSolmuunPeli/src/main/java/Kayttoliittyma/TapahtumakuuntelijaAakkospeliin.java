@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package sormetsolmuunpeli.sormetsolmuunpeli;
+package Kayttoliittyma;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -11,18 +11,19 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import javax.swing.JButton;
 import javax.swing.JTextField;
+import sormetsolmuunpeli.sormetsolmuunpeli.Peli;
 
 /**
  *
  * @author sasumaki
  */
-public class Tapahtumakuuntelija implements KeyListener {
+public class TapahtumakuuntelijaAakkospeliin implements KeyListener {
 
     private JTextField painettavakirjain;
 
     private Peli peli;
 
-    public Tapahtumakuuntelija(Peli peli, JTextField painettavakirjain) {
+    public TapahtumakuuntelijaAakkospeliin(Peli peli, JTextField painettavakirjain) {
         this.painettavakirjain = painettavakirjain;
 
         this.peli = peli;

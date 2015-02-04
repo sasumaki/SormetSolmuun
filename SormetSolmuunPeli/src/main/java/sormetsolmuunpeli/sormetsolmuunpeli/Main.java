@@ -1,5 +1,6 @@
 package sormetsolmuunpeli.sormetsolmuunpeli;
 
+import Kayttoliittyma.Kayttoliittyma;
 import java.util.List;
 import java.util.Scanner;
 import javax.swing.SwingUtilities;
