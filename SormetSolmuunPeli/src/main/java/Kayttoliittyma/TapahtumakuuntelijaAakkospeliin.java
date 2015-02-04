@@ -11,7 +11,7 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import javax.swing.JButton;
 import javax.swing.JTextField;
-import sormetsolmuunpeli.sormetsolmuunpeli.Peli;
+import sormetsolmuunpeli.sormetsolmuunpeli.Aakkospeli;
 
 /**
  *
@@ -21,9 +21,9 @@ public class TapahtumakuuntelijaAakkospeliin implements KeyListener {
 
     private JTextField painettavakirjain;
 
-    private Peli peli;
+    private Aakkospeli peli;
 
-    public TapahtumakuuntelijaAakkospeliin(Peli peli, JTextField painettavakirjain) {
+    public TapahtumakuuntelijaAakkospeliin(Aakkospeli peli, JTextField painettavakirjain) {
         this.painettavakirjain = painettavakirjain;
 
         this.peli = peli;

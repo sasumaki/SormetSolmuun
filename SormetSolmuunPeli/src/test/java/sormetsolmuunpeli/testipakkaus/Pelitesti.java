@@ -15,7 +15,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import sormetsolmuunpeli.sormetsolmuunpeli.Pelaaja;
-import sormetsolmuunpeli.sormetsolmuunpeli.Peli;
+import sormetsolmuunpeli.sormetsolmuunpeli.Aakkospeli;
 
 /**
  *
@@ -25,7 +25,7 @@ public class Pelitesti {
 
     Pelaaja pelaaja;
     Scanner lukija;
-    Peli peli;
+    Aakkospeli peli;
     List kokeilu;
 
     public Pelitesti() {
@@ -41,7 +41,7 @@ public class Pelitesti {
 
     @Before
     public void setUp() {
-        peli = new Peli(pelaaja, lukija);
+        peli = new Aakkospeli(pelaaja, lukija);
 
     }
 

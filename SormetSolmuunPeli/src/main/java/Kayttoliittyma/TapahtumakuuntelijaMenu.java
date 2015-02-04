@@ -13,7 +13,8 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.WindowConstants;
-import sormetsolmuunpeli.sormetsolmuunpeli.Peli;
+import sormetsolmuunpeli.sormetsolmuunpeli.Aakkospeli;
+import sormetsolmuunpeli.sormetsolmuunpeli.Invokerpeli;
 
 /**
  *
@@ -21,16 +22,19 @@ import sormetsolmuunpeli.sormetsolmuunpeli.Peli;
  */
 public class TapahtumakuuntelijaMenu implements ActionListener{
 
-    Peli peli;
-    JButton aakkospeli;
-    JButton invokerpeli;
+    Aakkospeli peli;
+    Invokerpeli invokerpeli;
+    JButton aakkospelinappi;
+    JButton invokerpelinappi;
     JFrame frame;
     
 
-    public TapahtumakuuntelijaMenu(Peli peli, JFrame frame) {
+    public TapahtumakuuntelijaMenu(Aakkospeli peli,Invokerpeli invokerpeli, JFrame frame, JButton aakkospelinappi, JButton invokerpelinappi) {
         this.peli = peli;
+        this.invokerpeli = invokerpeli;
         this.frame = frame;
-        this.aakkospeli = aakkospeli;
+        this.aakkospelinappi = aakkospelinappi;
+        this.invokerpelinappi = invokerpelinappi;
     }
 
     
@@ -41,9 +45,15 @@ public class TapahtumakuuntelijaMenu implements ActionListener{
         String cmd = ae.getActionCommand();
 
         if (cmd.equals("aakkospeli")) {
-            frame.setVisible(false);
-            aakkospeliGUI aakkospeliGUI = new aakkospeliGUI(peli, frame);
+            frame.remove(aakkospelinappi);
+            frame.remove(invokerpelinappi);
+            AakkospeliGUI aakkospeliGUI = new AakkospeliGUI(peli, frame);
 
+        }
+        if (cmd.equals("invokerpeli")){
+            frame.remove(aakkospelinappi);
+            frame.remove(invokerpelinappi);
+            InvokerpeliGUI invokerpeliGUI = new InvokerpeliGUI(invokerpeli, frame);
         }
     }
 

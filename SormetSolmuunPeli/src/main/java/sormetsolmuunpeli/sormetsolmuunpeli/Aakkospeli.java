@@ -17,7 +17,7 @@ import java.util.Scanner;
  *
  * @author sasumaki
  */
-public class Peli  {
+public class Aakkospeli  {
 
     private Pelaaja pelaaja;
     private List aakkosto;
@@ -25,7 +25,7 @@ public class Peli  {
     private int virheet;
    
 
-    public Peli(Pelaaja pelaaja, Scanner lukija) {
+    public Aakkospeli(Pelaaja pelaaja, Scanner lukija) {
         this.pelaaja = pelaaja;
         this.aakkosto = aakkosto;
         this.lukija = lukija;

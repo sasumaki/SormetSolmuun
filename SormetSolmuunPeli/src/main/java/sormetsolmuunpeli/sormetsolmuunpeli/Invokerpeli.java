@@ -9,17 +9,17 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
-import static sormetsolmuunpeli.sormetsolmuunpeli.Invoker.spellit.*;
+import static sormetsolmuunpeli.sormetsolmuunpeli.Invokerpeli.spellit.*;
 
 /**
  *
  * @author sasumaki
  */
-public class Invoker extends Peli {
+public class Invokerpeli extends Aakkospeli {
 
     private int[] orbit;
 
-    public Invoker(Pelaaja pelaaja, Scanner lukija) {
+    public Invokerpeli(Pelaaja pelaaja, Scanner lukija) {
         super(pelaaja, lukija);
         this.orbit = new int[3];
     }
@@ -126,6 +126,9 @@ public class Invoker extends Peli {
         }
         return null;
 
+    }
+    public int[] getOrbit(){
+        return orbit;
     }
 
 }

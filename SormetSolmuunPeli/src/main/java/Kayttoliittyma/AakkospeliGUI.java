@@ -14,21 +14,22 @@ import javax.swing.JFrame;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.WindowConstants;
-import sormetsolmuunpeli.sormetsolmuunpeli.Peli;
+import sormetsolmuunpeli.sormetsolmuunpeli.Aakkospeli;
 
 /**
  *
  * @author sasumaki
  */
-public class aakkospeliGUI {
+public class AakkospeliGUI {
 
     private JFrame frame;
-    private Peli peli;
+    private Aakkospeli peli;
 
-    public aakkospeliGUI(Peli peli, JFrame frame) {
+    public AakkospeliGUI(Aakkospeli peli, JFrame frame) {
 
         this.peli = peli;
         this.frame = frame;
+        
         luoKomponentitAakkospeliin(frame);
         frame.pack();
         frame.setVisible(true);
