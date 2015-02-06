@@ -6,7 +6,7 @@
 package Sormetsolmuun.Logiikka.Invokerpelilogiikka;
 
 import Sormetsolmuun.Logiikka.Aakkospelilogiikka.Aakkospeli;
-import Sormetsolmuun.Sormetsolmuun.Pelaaja;
+import Sormetsolmuun.Sormetsolmuun.Pelaaja.Pelaaja;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -15,7 +15,12 @@ import static Sormetsolmuun.Logiikka.Invokerpelilogiikka.Invokerpeli.spellit.*;
 import java.util.Random;
 
 /**
- *
+ *Logiikka invokerpeliin, käyttäjällä on kolmen alkion pituinen lista, 
+ * jossa on aina arvo {1,2,3}, jotka kuvastavat eri orbeja, joista rakentuu
+ * eri spellit.
+ * lisätietoa
+ * http://dota2.gamepedia.com/Invokerhttp://dota2.gamepedia.com/Invoker
+ * 
  * @author sasumaki
  */
 public class Invokerpeli extends Aakkospeli {
@@ -41,9 +46,9 @@ public class Invokerpeli extends Aakkospeli {
 
         return lista.get(random.nextInt(lista.size())).name();
     }
-    public void poistaSpelli(Enum poistettava){
-        lista.remove(poistettava);
-    }
+//    public void poistaSpelli(Enum poistettava){
+//        lista.remove(poistettava);
+//    }
     public ArrayList<Enum> getSpelliLista(){
         return lista;
     }
@@ -71,7 +76,10 @@ public class Invokerpeli extends Aakkospeli {
         orbit[1] = orbit[0];
         orbit[0] = orbi;
     }
-
+/**
+ * Palauttaa orbien asennon mukaisen spellin.
+ *  
+ */
     public spellit invoke() {
         if (orbit[0] == 1 && orbit[1] == 1 && orbit[2] == 1) {
             return COLDSNAP;

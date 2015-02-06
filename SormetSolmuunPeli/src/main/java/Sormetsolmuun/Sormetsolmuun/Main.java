@@ -1,5 +1,6 @@
 package Sormetsolmuun.Sormetsolmuun;
 
+import Sormetsolmuun.Sormetsolmuun.Pelaaja.Pelaaja;
 import Sormetsolmuun.Logiikka.Invokerpelilogiikka.Invokerpeli;
 import Sormetsolmuun.Kayttoliittymat.MenuKayttoliittyma.Kayttoliittyma;
 import java.util.List;

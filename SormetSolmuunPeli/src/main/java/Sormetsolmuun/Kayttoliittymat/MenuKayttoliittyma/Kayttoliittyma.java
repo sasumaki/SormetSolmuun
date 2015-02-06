@@ -13,7 +13,10 @@ import javax.swing.SwingConstants;
 import javax.swing.WindowConstants;
 import Sormetsolmuun.Logiikka.Aakkospelilogiikka.Aakkospeli;
 import Sormetsolmuun.Logiikka.Invokerpelilogiikka.Invokerpeli;
-
+/**
+ * Pelin käyttöliittymä
+ * @author sasumaki
+ */
 public class Kayttoliittyma implements Runnable {
 
     private JFrame frame;

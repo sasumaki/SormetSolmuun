@@ -12,6 +12,7 @@ import Sormetsolmuun.Logiikka.Invokerpelilogiikka.Invokerpeli;
 import javax.swing.JTextField;
 
 /**
+ * Tapahtumakuuntelija Invokerpeliin.
  *
  * @author sasumaki
  */
@@ -29,11 +30,15 @@ public class TapahtumakuuntelijaInvokerpeliin implements KeyListener {
         this.pisteet = 0;
     }
 
+    /**
+     * Painaessa q,w tai e peli vaihtaa listan alkioiden arvoja ja painaessa r,
+     * peli kutsuu metodia invoke, joka palauttaa listan alkioiden mukaisen
+     * spellin.
+     */
     @Override
     public void keyPressed(KeyEvent ke) {
         String syotetty = "" + ke.getKeyChar();
-        
-        
+
         if (syotetty.equals("q")) {
             peli.orbinvaihto(1);
         }
@@ -44,18 +49,17 @@ public class TapahtumakuuntelijaInvokerpeliin implements KeyListener {
             peli.orbinvaihto(3);
         }
         if (syotetty.equals("r")) {
-            if(invokettava.getText().equals(peli.invoke().name())){
+            if (invokettava.getText().equals(peli.invoke().name())) {
                 pisteet++;
-               if(pisteet == 10){
-                   invokettava.setText("You Wonnered!");
-               }else{
-                invokettava.setText(peli.getSpell());
-               }
-            }
-            else{
+                if (pisteet == 10) {
+                    invokettava.setText("You Wonnered!");
+                } else {
+                    invokettava.setText(peli.getSpell());
+                }
+            } else {
                 invokettava.setText("This magic...disappoints");
             }
-            
+
         }
         paivitettava.repaint();
     }

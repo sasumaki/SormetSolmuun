@@ -5,6 +5,10 @@ import java.awt.Graphics;
 import java.util.Arrays;
 import javax.swing.JPanel;
 import Sormetsolmuun.Logiikka.Invokerpelilogiikka.Invokerpeli;
+/**
+ * Piirtää kuvat invokergameen, orbien järjestyksen mukaan.
+ * @author sasumaki
+ */
 
 public class Piirtoalusta extends JPanel {
 

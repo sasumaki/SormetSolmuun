@@ -17,7 +17,7 @@ import javax.swing.WindowConstants;
 import Sormetsolmuun.Logiikka.Aakkospelilogiikka.Aakkospeli;
 
 /**
- *
+ * Graafinen käyttöliittymä aakkospeliin
  * @author sasumaki
  */
 public class AakkospeliGUI {

@@ -19,7 +19,7 @@ import Sormetsolmuun.Logiikka.Aakkospelilogiikka.Aakkospeli;
 import Sormetsolmuun.Logiikka.Invokerpelilogiikka.Invokerpeli;
 
 /**
- *
+ * Menun tapahtumakuuntelija.
  * @author sasumaki
  */
 public class TapahtumakuuntelijaMenu implements ActionListener{
@@ -41,7 +41,10 @@ public class TapahtumakuuntelijaMenu implements ActionListener{
 
     
 
-
+/**
+ * Käynnistää pelin klikkauksen mukaan
+ * @param ae 
+ */
     @Override
     public void actionPerformed(ActionEvent ae) {
         String cmd = ae.getActionCommand();

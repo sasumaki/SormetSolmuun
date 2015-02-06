@@ -15,7 +15,7 @@ import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 
 /**
- *
+ *Graafinen käyttöliittymä Invokerpeliin
  * @author sasumaki
  */
 public class InvokerpeliGUI {

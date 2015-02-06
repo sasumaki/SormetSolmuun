@@ -14,7 +14,7 @@ import javax.swing.JTextField;
 import Sormetsolmuun.Logiikka.Aakkospelilogiikka.Aakkospeli;
 
 /**
- *
+ *Tapahtumakuuntelija aakkospeliin. 
  * @author sasumaki
  */
 public class TapahtumakuuntelijaAakkospeliin implements KeyListener {
@@ -29,7 +29,11 @@ public class TapahtumakuuntelijaAakkospeliin implements KeyListener {
         this.peli = peli;
 
     }
-
+/**
+ * Painaessa ruudulla näkyvää näppäintä, peli antaa sinulle uuden painettavan ja poistaa
+ * painetun painettavien listalta.
+ * @param ke 
+ */
     @Override
     public void keyPressed(KeyEvent ke) {
         String painettava = painettavakirjain.getText();

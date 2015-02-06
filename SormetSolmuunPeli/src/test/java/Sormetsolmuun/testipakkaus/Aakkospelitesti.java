@@ -14,21 +14,21 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
-import Sormetsolmuun.Sormetsolmuun.Pelaaja;
+import Sormetsolmuun.Sormetsolmuun.Pelaaja.Pelaaja;
 import Sormetsolmuun.Logiikka.Aakkospelilogiikka.Aakkospeli;
 
 /**
  *
  * @author sasumaki
  */
-public class Pelitesti {
+public class Aakkospelitesti {
 
     Pelaaja pelaaja;
     Scanner lukija;
     Aakkospeli peli;
     List kokeilu;
 
-    public Pelitesti() {
+    public Aakkospelitesti() {
     }
 
     @BeforeClass

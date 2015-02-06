@@ -37,10 +37,8 @@
         <instrumentation>
             <includes>
                 <include>Sormetsolmuun.Logiikka.Aakkospelilogiikka/*.class</include>
-                <include>Sormetsolmuun.Sormetsolmuun/*.class</include>
+                <include>Sormetsolmuun.Sormetsolmuun.Pelaaja/*.class</include>
                 <include>Sormetsolmuun.Logiikka.Invokerpelilogiikka/*.class</include>
-                
-                
             </includes>
         </instrumentation>
     </configuration>

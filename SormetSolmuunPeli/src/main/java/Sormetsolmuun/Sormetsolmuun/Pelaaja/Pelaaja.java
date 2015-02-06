@@ -1,5 +1,8 @@
-package Sormetsolmuun.Sormetsolmuun;
-
+package Sormetsolmuun.Sormetsolmuun.Pelaaja;
+/**
+ * Pelaajaluokka, vähän toiminnallisuutta ainakin toistaiseksi.
+ * @author sasumaki
+ */
 public class Pelaaja {
 
     private String nimi;

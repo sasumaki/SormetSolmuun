@@ -6,7 +6,7 @@
 package Sormetsolmuun.Logiikka.Aakkospelilogiikka;
 
 
-import Sormetsolmuun.Sormetsolmuun.Pelaaja;
+import Sormetsolmuun.Sormetsolmuun.Pelaaja.Pelaaja;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -15,7 +15,7 @@ import java.util.Scanner;
 
 
 /**
- *
+ * Luokalla on lista aakkosista jota peli käyttää.
  * @author sasumaki
  */
 public class Aakkospeli  {
