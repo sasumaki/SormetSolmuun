@@ -5,7 +5,6 @@
  */
 package Sormetsolmuun.Logiikka.Aakkospelilogiikka;
 
-
 import Sormetsolmuun.Sormetsolmuun.Pelaaja.Pelaaja;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -13,18 +12,17 @@ import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
-
 /**
  * Luokalla on lista aakkosista jota peli käyttää.
+ *
  * @author sasumaki
  */
-public class Aakkospeli  {
+public class Aakkospeli {
 
     private Pelaaja pelaaja;
     private List aakkosto;
     private Scanner lukija;
     private int virheet;
-   
 
     public Aakkospeli(Pelaaja pelaaja, Scanner lukija) {
         this.pelaaja = pelaaja;
@@ -33,13 +31,22 @@ public class Aakkospeli  {
         this.virheet = virheet;
     }
 
+    /**
+     * Luo aakkoslistan, jota käytetään pelissä
+     */
     public void luoAakkosto() {
         String[] aakkosto = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l",
-            "m","n","o","p","q","r","s","t","u","v","w","x","y","z"};
+            "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"};
 
         List<String> aakkostolista = new ArrayList<String>(Arrays.asList(aakkosto));
         this.aakkosto = aakkostolista;
     }
+
+    /**
+     * poistaa kirjaimen listalta
+     *
+     * @param kirjain
+     */
 
     public void poistaKirjain(String kirjain) {
         aakkosto.remove(kirjain);
@@ -48,10 +55,17 @@ public class Aakkospeli  {
     public List getAakkosto() {
         return aakkosto;
     }
-    public Scanner getLukija(){
+
+    public Scanner getLukija() {
         return lukija;
     }
 
+    /**
+     * hakee satunnaisen kirjaimen listalta
+     *
+     * @param lista
+     * @return kirjain
+     */
     public String getKirjain(List lista) {
         String kirjain = "";
         Random randomi = new Random();
@@ -60,6 +74,13 @@ public class Aakkospeli  {
         return kirjain;
     }
 
+    /**
+     * testaa onko merkki sama kuin toinen
+     *
+     * @param syote
+     * @param vastaus
+     * @return
+     */
     public Boolean testaaMerkki(String syote, String vastaus) {
         if (syote.equalsIgnoreCase(vastaus)) {
             return true;
@@ -67,48 +88,28 @@ public class Aakkospeli  {
 
         return false;
     }
-    public void virheidenLisays(){
+
+    /**
+     * lisää pelaajan tekemiä virheitä.
+     */
+    public void virheidenLisays() {
         virheet++;
     }
-    public int getVirheet(){
+
+    public int getVirheet() {
         return virheet;
     }
-    public boolean liikaaVirheita(){
-        if(virheet > 3){
+
+    /**
+     * palauttaa totuusarvon true jos virheitä yli 3, muuten false
+     *
+     * @return
+     */
+    public boolean liikaaVirheita() {
+        if (virheet > 3) {
             return true;
         }
         return false;
     }
-    
-    
-            //vanhaa tekstikäyttöliittymää
 
-//    public void kaynnistys(Scanner lukija) {
-//        System.out.println("Tervetuloa Aakkospeliin " + pelaaja.getNimi() + "!");
-//
-//        luoAakkosto();
-//
-//        kierros(lukija);
-//    }
-//
-//    public void kierros(Scanner lukija) {
-//
-//        String vastaus = getKirjain(aakkosto);
-//        poistaKirjain(vastaus);
-//        System.out.println("Paina: " + vastaus);
-//        String syote = lukija.nextLine();
-//        while (testaaMerkki(syote, vastaus) == false) {
-//            System.out.println("Väärin meni los retardos, yritä uudelleen: " + vastaus);
-//            syote = lukija.nextLine();
-//        }
-//        if (aakkosto.isEmpty()) {
-//            System.out.println("Voitit pelin!");
-//            pelaaja.lisaaPisteet(1);
-//
-//        } else {
-//            kierros(lukija);
-//        }
-//    }
-
- 
 }

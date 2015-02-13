@@ -33,7 +33,9 @@ public class Invokerpeli extends Aakkospeli {
         this.orbit = new int[3];
         this.lista = new ArrayList<Enum>();
     }
-
+/**
+ * luo eri spelleille enumit
+ */
     public enum spellit {
 
         COLDSNAP, TORNADO, EMP, METEOR, SUNSTRIKE, GHOSTWALK, ALACRITY, DEAFENINGBLAST,
@@ -52,7 +54,9 @@ public class Invokerpeli extends Aakkospeli {
     public ArrayList<Enum> getSpelliLista(){
         return lista;
     }
-
+/**
+ * tekee listan enumeista
+ */
     public void luoSpelliLista() {
 
         lista.add(COLDSNAP);
@@ -67,7 +71,10 @@ public class Invokerpeli extends Aakkospeli {
         lista.add(ICEWALL);
 
     }
-
+/**
+ * Siirtää indeksit eteenpäin poistaen 2. indeksin ja lisäen uuden 0. indeksiin
+ * @param orbi 
+ */
     public void orbinvaihto(int orbi) {
         if (orbi < 0 || orbi > 3) {
             return;
@@ -77,7 +84,7 @@ public class Invokerpeli extends Aakkospeli {
         orbit[0] = orbi;
     }
 /**
- * Palauttaa orbien asennon mukaisen spellin.
+ * Palauttaa orbien "asennon" mukaisen spellin.
  *  
  */
     public spellit invoke() {

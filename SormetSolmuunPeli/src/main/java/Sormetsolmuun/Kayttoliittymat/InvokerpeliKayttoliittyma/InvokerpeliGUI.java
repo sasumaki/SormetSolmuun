@@ -23,7 +23,11 @@ public class InvokerpeliGUI {
     private JFrame frame;
     private Invokerpeli peli;
     private Piirtoalusta piirtoalusta;
-
+/**
+ * konstruktori
+ * @param peli
+ * @param frame 
+ */
     public InvokerpeliGUI(Invokerpeli peli, JFrame frame)  {
 
         this.peli = peli;
@@ -34,7 +38,10 @@ public class InvokerpeliGUI {
         frame.setVisible(true);
 
     }
-
+/**
+ * luo komponentit graafiseen käyttöliittymään
+ * @param container 
+ */
     public void luoKomponentitInvokerpeliin(Container container) {
         frame.setLayout(new GridLayout(2, 1));
         frame.requestFocus();

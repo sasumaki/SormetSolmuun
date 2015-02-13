@@ -22,7 +22,11 @@ public class TapahtumakuuntelijaAakkospeliin implements KeyListener {
     private JTextField painettavakirjain;
 
     private Aakkospeli peli;
-
+/**
+ * konstruktori
+ * @param peli
+ * @param painettavakirjain 
+ */
     public TapahtumakuuntelijaAakkospeliin(Aakkospeli peli, JTextField painettavakirjain) {
         this.painettavakirjain = painettavakirjain;
 

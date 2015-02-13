@@ -24,3 +24,8 @@
 
 4.2.2015 klo 22.00 - 01.00
  Invokerpelin kehitys
+5.2.2015 klo XX.XX - XX.XX
+ Tein jotain, olin kännissä 
+
+6.2.2015 klo 10.00-11.00
+ Testien ja javadoccien tekoa

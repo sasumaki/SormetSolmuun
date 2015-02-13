@@ -24,6 +24,12 @@ public class AakkospeliGUI {
 
     private JFrame frame;
     private Aakkospeli peli;
+    
+    /**
+     * Konstruktori AakkospeliGUI
+     * @param peli
+     * @param frame 
+     */
 
     public AakkospeliGUI(Aakkospeli peli, JFrame frame) {
 
