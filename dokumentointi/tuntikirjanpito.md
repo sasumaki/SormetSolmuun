@@ -29,3 +29,9 @@
 
 6.2.2015 klo 10.00-11.00
  Testien ja javadoccien tekoa
+
+9-14.2.2015
+ Dokumentointia tehty X määrä tunteja
+
+19.2.2015 klo 12.00-14.00
+ Ajastin ja restart näppäimet sekä hieman logiikan korjausta.
