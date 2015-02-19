@@ -61,7 +61,7 @@ public class Invokerpelitestaus {
             kokeilustring += a;
         }
         String pelistring = "";
-        for (int a : kokeilu) {
+        for (int a : peli.getOrbit()) {
             pelistring += a;
         }
 
@@ -209,165 +209,200 @@ public class Invokerpelitestaus {
 
         assertEquals(invokettu, "TORNADO");
     }
+
     @Test
-    public void testaaInvoke232(){
+    public void testaaInvoke232() {
         peli.orbinvaihto(2);
         peli.orbinvaihto(3);
         peli.orbinvaihto(2);
-        
+
         String invokettu = peli.invoke().name();
-        
-        assertEquals(invokettu,"ALACRITY");
+
+        assertEquals(invokettu, "ALACRITY");
     }
+
     @Test
-    public void testaaInvoke122(){
+    public void testaaInvoke122() {
         peli.orbinvaihto(1);
         peli.orbinvaihto(2);
         peli.orbinvaihto(2);
-        
+
         String invokettu = peli.invoke().name();
-        
-        assertEquals(invokettu,"TORNADO");
+
+        assertEquals(invokettu, "TORNADO");
     }
+
     @Test
-    public void testaaInvoke322(){
+    public void testaaInvoke322() {
         peli.orbinvaihto(3);
         peli.orbinvaihto(2);
         peli.orbinvaihto(2);
-        
+
         String invokettu = peli.invoke().name();
-        
-        assertEquals(invokettu,"ALACRITY");
+
+        assertEquals(invokettu, "ALACRITY");
     }
+
     @Test
-    public void testaaInvoke333(){
+    public void testaaInvoke333() {
         peli.orbinvaihto(3);
         peli.orbinvaihto(3);
         peli.orbinvaihto(3);
-        
+
         String invokettu = peli.invoke().name();
-        
-        assertEquals(invokettu,"SUNSTRIKE");
+
+        assertEquals(invokettu, "SUNSTRIKE");
     }
+
     @Test
-    public void testaaInvoke331(){
+    public void testaaInvoke331() {
         peli.orbinvaihto(3);
         peli.orbinvaihto(3);
         peli.orbinvaihto(1);
-        
+
         String invokettu = peli.invoke().name();
-        
-        assertEquals(invokettu,"FORGESPIRIT");
+
+        assertEquals(invokettu, "FORGESPIRIT");
     }
+
     @Test
-    public void testaaInvoke332(){
+    public void testaaInvoke332() {
         peli.orbinvaihto(3);
         peli.orbinvaihto(3);
         peli.orbinvaihto(2);
-        
+
         String invokettu = peli.invoke().name();
-        
-        assertEquals(invokettu,"METEOR");
+
+        assertEquals(invokettu, "METEOR");
     }
+
     @Test
-    public void testaaInvoke323(){
+    public void testaaInvoke323() {
         peli.orbinvaihto(3);
         peli.orbinvaihto(2);
         peli.orbinvaihto(3);
-        
+
         String invokettu = peli.invoke().name();
-        
-        assertEquals(invokettu,"METEOR");
+
+        assertEquals(invokettu, "METEOR");
     }
+
     @Test
-    public void testaaInvoke313(){
+    public void testaaInvoke313() {
         peli.orbinvaihto(3);
         peli.orbinvaihto(1);
         peli.orbinvaihto(3);
-        
+
         String invokettu = peli.invoke().name();
-        
-        assertEquals(invokettu,"FORGESPIRIT");
+
+        assertEquals(invokettu, "FORGESPIRIT");
     }
+
     @Test
-    public void testaaInvoke133(){
+    public void testaaInvoke133() {
         peli.orbinvaihto(1);
         peli.orbinvaihto(3);
         peli.orbinvaihto(3);
-        
+
         String invokettu = peli.invoke().name();
-        
-        assertEquals(invokettu,"FORGESPIRIT");
+
+        assertEquals(invokettu, "FORGESPIRIT");
     }
+
     @Test
-    public void testaaInvoke233(){
+    public void testaaInvoke233() {
         peli.orbinvaihto(2);
         peli.orbinvaihto(3);
         peli.orbinvaihto(3);
-        
+
         String invokettu = peli.invoke().name();
-        
-        assertEquals(invokettu,"METEOR");
+
+        assertEquals(invokettu, "METEOR");
     }
+
     @Test
-    public void testaaInvoke123(){
+    public void testaaInvoke123() {
         peli.orbinvaihto(1);
         peli.orbinvaihto(2);
         peli.orbinvaihto(3);
-        
+
         String invokettu = peli.invoke().name();
-        
-        assertEquals(invokettu,"DEAFENINGBLAST");
+
+        assertEquals(invokettu, "DEAFENINGBLAST");
     }
+
     @Test
-    public void testaaInvoke132(){
+    public void testaaInvoke132() {
         peli.orbinvaihto(1);
         peli.orbinvaihto(3);
         peli.orbinvaihto(2);
-        
+
         String invokettu = peli.invoke().name();
-        
-        assertEquals(invokettu,"DEAFENINGBLAST");
+
+        assertEquals(invokettu, "DEAFENINGBLAST");
     }
+
     @Test
-    public void testaaInvoke312(){
+    public void testaaInvoke312() {
         peli.orbinvaihto(3);
         peli.orbinvaihto(1);
         peli.orbinvaihto(2);
-        
+
         String invokettu = peli.invoke().name();
-        
-        assertEquals(invokettu,"DEAFENINGBLAST");
+
+        assertEquals(invokettu, "DEAFENINGBLAST");
     }
+
     @Test
-    public void testaaInvoke321(){
+    public void testaaInvoke321() {
         peli.orbinvaihto(3);
         peli.orbinvaihto(2);
         peli.orbinvaihto(1);
-        
+
         String invokettu = peli.invoke().name();
-        
-        assertEquals(invokettu,"DEAFENINGBLAST");
+
+        assertEquals(invokettu, "DEAFENINGBLAST");
     }
+
     @Test
-    public void testaaInvoke213(){
+    public void testaaInvoke213() {
         peli.orbinvaihto(2);
         peli.orbinvaihto(1);
         peli.orbinvaihto(3);
-        
+
         String invokettu = peli.invoke().name();
-        
-        assertEquals(invokettu,"DEAFENINGBLAST");
+
+        assertEquals(invokettu, "DEAFENINGBLAST");
     }
+
     @Test
-    public void testaaInvoke231(){
+    public void testaaInvoke231() {
         peli.orbinvaihto(2);
         peli.orbinvaihto(3);
         peli.orbinvaihto(1);
-        
+
         String invokettu = peli.invoke().name();
+
+        assertEquals(invokettu, "DEAFENINGBLAST");
+    }
+
+    @Test
+    public void testaaRestart() {
+        peli.restart();
+
+        int[] kokeilu = {0, 0, 0};
+        String kokeilustring = "";
+
+        for (int a : kokeilu) {
+            kokeilustring += a;
+        }
+        String pelistring = "";
+        for (int a : peli.getOrbit()) {
+            pelistring += a;
+        }
         
-        assertEquals(invokettu,"DEAFENINGBLAST");
+        assertEquals(pelistring, kokeilustring);
+
     }
 
 }

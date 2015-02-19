@@ -19,7 +19,7 @@ import java.util.Random;
  * jossa on aina arvo {1,2,3}, jotka kuvastavat eri orbeja, joista rakentuu
  * eri spellit.
  * lisätietoa
- * http://dota2.gamepedia.com/Invokerhttp://dota2.gamepedia.com/Invoker
+ * http://dota2.gamepedia.com/Invoker
  * 
  * @author sasumaki
  */
@@ -79,9 +79,9 @@ public class Invokerpeli extends Aakkospeli {
      */
     public void restart(){
         luoSpelliLista();
-        orbinvaihto(-1);
-        orbinvaihto(-1);
-        orbinvaihto(-1);
+        orbinvaihto(0);
+        orbinvaihto(0);
+        orbinvaihto(0);
         
     }
 /**
