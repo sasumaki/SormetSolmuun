@@ -36,3 +36,6 @@
 
 19.2.2015 klo 12.00-14.00
  Ajastin ja restart näppäimet sekä hieman logiikan korjausta.
+
+19.2.2015 klo 20-45-21.46
+ Dokumentointia sekä bugi fixailuu
