@@ -22,12 +22,14 @@ public class TapahtumakuuntelijaInvokerpeliin implements KeyListener {
     Component paivitettava;
     JTextField invokettava;
     private int pisteet;
+    private long aloitusaika;
 
-    public TapahtumakuuntelijaInvokerpeliin(Invokerpeli peli, Component paivitettava, JTextField invokettava) {
+    public TapahtumakuuntelijaInvokerpeliin(Invokerpeli peli, Component paivitettava, JTextField invokettava, long aloitusaika) {
         this.peli = peli;
         this.paivitettava = paivitettava;
         this.invokettava = invokettava;
         this.pisteet = 0;
+        this.aloitusaika = aloitusaika;
     }
 
     /**
@@ -38,6 +40,13 @@ public class TapahtumakuuntelijaInvokerpeliin implements KeyListener {
     @Override
     public void keyPressed(KeyEvent ke) {
         String syotetty = "" + ke.getKeyChar();
+
+        if (ke.getKeyCode() == KeyEvent.VK_ENTER) {
+            peli.restart();
+            pisteet = 0;
+            invokettava.setText(peli.getSpell(""));
+            aloitusaika = System.currentTimeMillis();
+        }
 
         if (syotetty.equals("q")) {
             peli.orbinvaihto(1);
@@ -52,12 +61,21 @@ public class TapahtumakuuntelijaInvokerpeliin implements KeyListener {
             if (invokettava.getText().equals(peli.invoke().name())) {
                 pisteet++;
                 if (pisteet == 10) {
-                    invokettava.setText("You Wonnered!");
+                    long lopetusaika = System.currentTimeMillis();
+                    long sekunnit = ((lopetusaika - aloitusaika) / 1000) % 60;
+                    long millisekunnit = (lopetusaika - aloitusaika) % 1000;
+                    invokettava.setText("You Wonnered!" + "\n" + sekunnit + ":" + millisekunnit);
+
                 } else {
-                    invokettava.setText(peli.getSpell());
+                    invokettava.setText(peli.getSpell(invokettava.getText().toString()));
                 }
             } else {
-                invokettava.setText("This magic...disappoints");
+                if (invokettava.getText().startsWith("You Wonnered!")) {
+
+                } else {
+                    invokettava.setText("This magic...disappoints");
+                }
+
             }
 
         }

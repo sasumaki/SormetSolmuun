@@ -45,7 +45,7 @@ public class InvokerpeliGUI {
     public void luoKomponentitInvokerpeliin(Container container) {
         frame.setLayout(new GridLayout(2, 1));
         frame.requestFocus();
-        JTextField invokettava = new JTextField(peli.getSpell());
+        JTextField invokettava = new JTextField(peli.getSpell(""));
         Font font = new Font("Comic Sans", Font.PLAIN, 24);
         invokettava.setFont(font);
         invokettava.setForeground(Color.BLACK);
@@ -53,7 +53,8 @@ public class InvokerpeliGUI {
         invokettava.setEditable(false);
         container.add(invokettava);
         piirtoalusta = new Piirtoalusta(peli);
-        frame.addKeyListener(new TapahtumakuuntelijaInvokerpeliin(peli, piirtoalusta,invokettava));
+        long aloitusaika = System.currentTimeMillis();
+        frame.addKeyListener(new TapahtumakuuntelijaInvokerpeliin(peli, piirtoalusta,invokettava, aloitusaika));
         container.add(piirtoalusta);
 
         piirtoalusta.setEnabled(true);

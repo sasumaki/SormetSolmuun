@@ -42,11 +42,14 @@ public class Invokerpeli extends Aakkospeli {
         FORGESPIRIT, ICEWALL;
     }
 
-    public String getSpell() {
-
+    public String getSpell(String spelli) {
+        
         Random random = new Random();
-
-        return lista.get(random.nextInt(lista.size())).name();
+        String palautettava = lista.get(random.nextInt(lista.size())).name();
+        while(palautettava.equals(spelli)){
+            palautettava = lista.get(random.nextInt(lista.size())).name();
+        }
+        return palautettava;
     }
 //    public void poistaSpelli(Enum poistettava){
 //        lista.remove(poistettava);
@@ -58,7 +61,7 @@ public class Invokerpeli extends Aakkospeli {
  * tekee listan enumeista
  */
     public void luoSpelliLista() {
-
+        lista.clear();
         lista.add(COLDSNAP);
         lista.add(TORNADO);
         lista.add(EMP);
@@ -70,6 +73,16 @@ public class Invokerpeli extends Aakkospeli {
         lista.add(FORGESPIRIT);
         lista.add(ICEWALL);
 
+    }
+    /**
+     * aloittaa pelin alusta
+     */
+    public void restart(){
+        luoSpelliLista();
+        orbinvaihto(-1);
+        orbinvaihto(-1);
+        orbinvaihto(-1);
+        
     }
 /**
  * Siirtää indeksit eteenpäin poistaen 2. indeksin ja lisäen uuden 0. indeksiin

@@ -18,24 +18,25 @@ import Sormetsolmuun.Logiikka.Aakkospelilogiikka.Aakkospeli;
 
 /**
  * Graafinen käyttöliittymä aakkospeliin
+ *
  * @author sasumaki
  */
 public class AakkospeliGUI {
 
     private JFrame frame;
     private Aakkospeli peli;
-    
+
     /**
      * Konstruktori AakkospeliGUI
+     *
      * @param peli
-     * @param frame 
+     * @param frame
      */
-
     public AakkospeliGUI(Aakkospeli peli, JFrame frame) {
 
         this.peli = peli;
         this.frame = frame;
-        
+
         luoKomponentitAakkospeliin(frame);
         frame.pack();
         frame.setVisible(true);
@@ -53,7 +54,9 @@ public class AakkospeliGUI {
         container.add(painettavakirjain);
         painettavakirjain.setEditable(false);
 
-        TapahtumakuuntelijaAakkospeliin kasittelija = new TapahtumakuuntelijaAakkospeliin(peli, painettavakirjain);
+        long alotusaika = System.currentTimeMillis();
+
+        TapahtumakuuntelijaAakkospeliin kasittelija = new TapahtumakuuntelijaAakkospeliin(peli, painettavakirjain, alotusaika);
 
         painettavakirjain.addKeyListener(kasittelija);
     }

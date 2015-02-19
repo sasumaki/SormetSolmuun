@@ -99,6 +99,12 @@ public class Aakkospeli {
     public int getVirheet() {
         return virheet;
     }
+    /**
+     * nollaa virhelaskurin
+     */
+    public void nollaaVirheet(){
+        virheet = 0;
+    }
 
     /**
      * palauttaa totuusarvon true jos virheitä yli 3, muuten false
