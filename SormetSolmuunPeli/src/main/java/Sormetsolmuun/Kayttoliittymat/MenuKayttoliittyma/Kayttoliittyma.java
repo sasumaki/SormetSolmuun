@@ -1,18 +1,16 @@
 package Sormetsolmuun.Kayttoliittymat.MenuKayttoliittyma;
 
-import java.awt.Color;
 import java.awt.Container;
 import java.awt.Dimension;
-import java.awt.Font;
 import java.awt.GridLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
-import javax.swing.SwingConstants;
 import javax.swing.WindowConstants;
 import Sormetsolmuun.Logiikka.Aakkospelilogiikka.Aakkospeli;
 import Sormetsolmuun.Logiikka.Invokerpelilogiikka.Invokerpeli;
+import Sormetsolmuun.Sormetsolmuun.Pelaaja.Pelaaja;
+import java.util.Scanner;
+
 /**
  * Pelin käyttöliittymä
  * @author sasumaki
@@ -23,9 +21,14 @@ public class Kayttoliittyma implements Runnable {
     Aakkospeli aakkospeli;
     Invokerpeli invokerpeli;
 
-    public Kayttoliittyma(Aakkospeli aakkospeli, Invokerpeli invokerpeli) {
-        this.aakkospeli = aakkospeli;
-        this.invokerpeli = invokerpeli;
+    public Kayttoliittyma() {
+        
+        Scanner lukija = new Scanner(System.in);
+        Pelaaja pelaaja = new Pelaaja("Pelaaja Pelityyppi");
+        this.aakkospeli = new Aakkospeli(pelaaja, lukija);
+        this.invokerpeli = new Invokerpeli(pelaaja, lukija);
+        aakkospeli.luoAakkosto();
+        invokerpeli.luoSpelliLista();
     }
 
     @Override

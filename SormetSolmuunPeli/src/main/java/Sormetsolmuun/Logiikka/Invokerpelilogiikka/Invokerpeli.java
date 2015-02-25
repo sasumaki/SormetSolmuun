@@ -8,11 +8,11 @@ package Sormetsolmuun.Logiikka.Invokerpelilogiikka;
 import Sormetsolmuun.Logiikka.Aakkospelilogiikka.Aakkospeli;
 import Sormetsolmuun.Sormetsolmuun.Pelaaja.Pelaaja;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 import java.util.Scanner;
 import static Sormetsolmuun.Logiikka.Invokerpelilogiikka.Invokerpeli.spellit.*;
 import java.util.Random;
+
+        
 
 /**
  *Logiikka invokerpeliin, käyttäjällä on kolmen alkion pituinen lista, 

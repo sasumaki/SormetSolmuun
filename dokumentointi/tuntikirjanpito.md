@@ -39,3 +39,6 @@
 
 19.2.2015 klo 20-45-21.46
  Dokumentointia sekä bugi fixailuu
+
+22.2.2015 15min
+ Viimeiset korjailut ja jarin luonti.

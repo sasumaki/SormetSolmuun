@@ -7,13 +7,11 @@ package Sormetsolmuun.Kayttoliittymat.AakkospeliKayttoliittyma;
 
 import java.awt.Color;
 import java.awt.Container;
-import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.GridLayout;
 import javax.swing.JFrame;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
-import javax.swing.WindowConstants;
 import Sormetsolmuun.Logiikka.Aakkospelilogiikka.Aakkospeli;
 
 /**

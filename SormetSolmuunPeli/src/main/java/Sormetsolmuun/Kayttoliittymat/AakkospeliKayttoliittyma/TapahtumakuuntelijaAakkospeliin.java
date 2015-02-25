@@ -5,14 +5,10 @@
  */
 package Sormetsolmuun.Kayttoliittymat.AakkospeliKayttoliittyma;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-import javax.swing.JButton;
 import javax.swing.JTextField;
 import Sormetsolmuun.Logiikka.Aakkospelilogiikka.Aakkospeli;
-import javax.swing.Timer;
 
 /**
  * Tapahtumakuuntelija aakkospeliin.
